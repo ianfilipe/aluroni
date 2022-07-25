@@ -11,6 +11,7 @@ export default function SearchEngine({ search, setSearch }: SearchProps) {
   return (
     <div className={styles.searchEngine}>
       <input
+        placeholder="Buscar"
         value={search}
         onChange={(event) => setSearch(event.target.value)}
       />

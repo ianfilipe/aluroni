@@ -1,5 +1,6 @@
 import { ReactComponent as Logo } from "assets/logo.svg";
 import { useState } from "react";
+import Computer from "./Computer";
 import Filters from "./Filters";
 import styles from "./Menu.module.scss";
 import SearchEngine from "./SearchEngine";
@@ -20,6 +21,7 @@ export default function Menu() {
         <SearchEngine search={search} setSearch={setSearch} />
         <div className={styles.menu__filters}>
           <Filters filter={filter} setFilter={setFilter} />
+          <Computer />
         </div>
       </section>
     </main>
