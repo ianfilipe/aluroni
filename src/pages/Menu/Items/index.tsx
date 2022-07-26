@@ -1,7 +1,7 @@
-import menu from 'data/menu.json';
-import { useEffect, useState } from 'react';
-import Item from './Item';
-import styles from './Items.module.scss';
+import menu from 'data/menu.json'
+import { useEffect, useState } from 'react'
+import Item from './Item'
+import styles from './Items.module.scss'
 
 interface ItemsProps {
   search: string;
