@@ -9,6 +9,9 @@
   justify-content: space-between;
   padding: 16px;
   flex: 1;
+  @media (max-width: $desktop_xsm) {
+    width: 100%;
+  }
   input {
     color: #292b2f;
     background-color: transparent;
