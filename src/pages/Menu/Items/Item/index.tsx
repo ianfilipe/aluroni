@@ -1,6 +1,6 @@
-import classNames from 'classnames'
-import menu from '../items.json'
-import styles from './Item.module.scss'
+import classNames from 'classnames';
+import menu from 'data/menu.json';
+import styles from './Item.module.scss';
 
 // interface ItemProps {
 //   title: string;
