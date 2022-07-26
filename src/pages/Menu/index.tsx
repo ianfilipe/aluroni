@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Computer from "./Computer";
 import Filters from "./Filters";
+import Items from "./Items";
 import styles from "./Menu.module.scss";
 import SearchEngine from "./SearchEngine";
 
@@ -26,6 +27,7 @@ export default function Menu() {
       </header>
       <section className={styles.menu}>
         <h3 className={styles.menu__title}>Cardápio</h3>
+        <Items />
       </section>
     </main>
   );

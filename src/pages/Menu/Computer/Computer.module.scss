@@ -1,5 +1,19 @@
 @import "styles/variables";
 
+.teste {
+  color: #292b2f;
+  &--active {
+    color: white;
+  }
+}
+
+.icon {
+  fill: #292b2f;
+  &--active {
+    fill: white;
+  }
+}
+
 .computer {
   align-items: center;
   background-color: #e8e8e9;
@@ -17,7 +31,7 @@
   }
   &--active {
     background-color: #f72c29;
-    color: white;
+    color: #292b2f;
   }
   &__options {
     display: none;
@@ -46,11 +60,12 @@
       border-end-end-radius: 8px;
       border-end-start-radius: 8px;
     }
-    &:hover,
-    &--active {
+    &:hover {
       background-color: #f72c29;
-      cursor: pointer;
       color: white;
+    }
+    &--active {
+      cursor: pointer;
     }
   }
 }

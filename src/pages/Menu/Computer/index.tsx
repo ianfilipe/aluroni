@@ -22,8 +22,31 @@ export default function Computer({ computer, setComputer }: ComputerProps) {
       onClick={() => setOpen(!open)}
       onBlur={() => setOpen(false)}
     >
-      <span>{computerName || "Ordernar por"}</span>
-      {open ? <RiArrowUpSLine size={24} /> : <RiArrowDownSLine size={24} />}
+      <span
+        className={classNames({
+          [styles.teste]: true,
+          [styles["teste--active"]]: computer !== "",
+        })}
+      >
+        {computerName || "Ordernar por"}
+      </span>
+      {open ? (
+        <RiArrowUpSLine
+          size={24}
+          className={classNames({
+            [styles.icon]: true,
+            [styles["icon--active"]]: computer !== "",
+          })}
+        />
+      ) : (
+        <RiArrowDownSLine
+          size={24}
+          className={classNames({
+            [styles.icon]: true,
+            [styles["icon--active"]]: computer !== "",
+          })}
+        />
+      )}
       <div
         className={classNames({
           [styles.computer__options]: true,
