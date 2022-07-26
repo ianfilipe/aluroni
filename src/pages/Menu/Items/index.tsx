@@ -12,6 +12,16 @@ interface ItemsProps {
 export default function Items(props: ItemsProps) {
   const [list, setList] = useState(menu);
   const { search, filter, computer } = props;
+  const [initialList, setInitialList] = useState(menu.slice(0, 3));
+
+  window.addEventListener("scroll", () => {
+    if (initialList.length < menu.length && window.scrollY >= 600) {
+      setInitialList([
+        ...initialList,
+        ...menu.slice(initialList.length, initialList.length + 3),
+      ]);
+    }
+  });
 
   function testSearch(title: string) {
     const regex = new RegExp(search, "i");
@@ -43,15 +53,6 @@ export default function Items(props: ItemsProps) {
     setList(computerList(newList));
   }, [search, filter, computer]);
 
-  const [initialList, setInitialList] = useState(menu.slice(0, 3));
-  window.addEventListener("scroll", (event) => {
-    if (initialList.length < menu.length && window.scrollY >= 600) {
-      setInitialList([
-        ...initialList,
-        ...menu.slice(initialList.length, initialList.length + 3),
-      ]);
-    }
-  });
   return (
     <div className={styles.items}>
       {list.map((item) => (
