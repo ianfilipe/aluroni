@@ -1,4 +1,5 @@
 // import { ReactComponent as Logo } from "assets/logo.svg";
+import Nav from 'components/Nav'
 import { useState } from 'react'
 import Computer from './Computer'
 import Filters from './Filters'
@@ -12,9 +13,7 @@ export default function Menu() {
 	const [computer, setComputer] = useState('')
 	return (
 		<main>
-			<nav className={styles.nav}>
-				<h1 className={styles.nav__logo}>Aluroni</h1>
-			</nav>
+			<Nav />
 			<header className={styles.header}>
 				<div className={styles.header__searchbox}>
 					<SearchEngine search={search} setSearch={setSearch} />

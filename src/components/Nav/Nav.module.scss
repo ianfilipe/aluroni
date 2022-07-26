@@ -1,0 +1,22 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
+.nav {
+  padding: 48px $px;
+  @media (max-width: $desktop_xsm) {
+    padding: 24px $px-mobile;
+  }
+  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+    padding: 24px $px-sm;
+  }
+  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+    padding: 24px $px-md;
+  }
+  &__logo {
+    color: #292b2f;
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 48px;
+    font-weight: 400;
+  }
+}
