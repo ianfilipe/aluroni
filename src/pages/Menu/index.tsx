@@ -27,7 +27,7 @@ export default function Menu() {
       </header>
       <section className={styles.menu}>
         <h3 className={styles.menu__title}>Cardápio</h3>
-        <Items />
+        <Items search={search} filter={filter} computer={computer} />
       </section>
     </main>
   );
