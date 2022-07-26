@@ -2,6 +2,8 @@
 @import "styles/breakpoints";
 
 .nav {
+  justify-content: space-between;
+  display: flex;
   padding: 48px $px;
   @media (max-width: $desktop_xsm) {
     padding: 24px $px-mobile;
@@ -18,5 +20,22 @@
     font-family: "Playfair Display";
     font-size: 48px;
     font-weight: 400;
+  }
+  &__list {
+    align-items: center;
+    display: flex;
+  }
+  &__link {
+    list-style-type: none;
+    padding: 0 16px;
+    a {
+      color: #292b2f;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
