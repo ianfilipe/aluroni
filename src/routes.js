@@ -1,3 +1,4 @@
+import DefaultPage from 'components/DefaultPage'
 import Nav from 'components/Nav'
 import Home from 'pages/Home'
 import Menu from 'pages/Menu'
@@ -8,8 +9,10 @@ export default function AppRouter() {
 		<Router>
 			<Nav />
 			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='/cardapio' element={<Menu />} />
+				<Route path='/' element={<DefaultPage />}>
+					<Route index element={<Home />}/>
+				</Route>
+				<Route path='cardapio' element={<Menu />} />
 			</Routes>
 		</Router>
 	)

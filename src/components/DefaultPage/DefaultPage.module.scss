@@ -1,0 +1,45 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
+.header {
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("/assets/menu/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 544px;
+  padding: 0px $px;
+  @media (max-width: $desktop_xsm) {
+    padding: 0px $px-mobile;
+  }
+  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+    padding: 0px $px-sm;
+  }
+  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+    padding: 0px $px-md;
+  }
+  &__text {
+    line-height: 96px;
+    max-width: 50%;
+    font-family: 'Fairplay Display';
+    font-size: 96px;
+    color: white;
+    margin-bottom: 32px;
+  }
+  &__button {
+    color: #292b2f;
+    background-color: #e8e8e9;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 32px;
+    justify-content: center;
+    &:hover {
+      cursor: pointer;
+      background-color: #f72c29;
+      color: white;
+    }
+  }
+}

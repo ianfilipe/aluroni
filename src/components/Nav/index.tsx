@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './Nav.module.scss'
 
 export default function Nav() {
@@ -21,7 +22,7 @@ export default function Nav() {
 			<ul className={styles.nav__list}>
 				{routes.map((route, index) => (
 					<li key={index} className={styles.nav__link}>
-						<a href={route.to}>{route.label}</a>
+						<Link to={route.to}>{route.label}</Link>
 					</li>
 				))}
 			</ul>
