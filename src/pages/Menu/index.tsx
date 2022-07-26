@@ -1,4 +1,4 @@
-import { ReactComponent as Logo } from "assets/logo.svg";
+// import { ReactComponent as Logo } from "assets/logo.svg";
 import { useState } from "react";
 import Computer from "./Computer";
 import Filters from "./Filters";
@@ -12,18 +12,20 @@ export default function Menu() {
   return (
     <main>
       <nav className={styles.nav}>
-        <Logo />
+        <h1 className={styles.nav__logo}>Aluroni</h1>
       </nav>
       <header className={styles.header}>
-        <div className={styles.header__text}>A casa do código e da massa</div>
+        <div className={styles.header__searchbox}>
+          <SearchEngine search={search} setSearch={setSearch} />
+          <div className={styles.filters}>
+            <Filters filter={filter} setFilter={setFilter} />
+            <Computer computer={computer} setComputer={setComputer} />
+          </div>
+        </div>
+        {/* <div className={styles.header__text}>A casa do código e da massa</div> */}
       </header>
       <section className={styles.menu}>
         <h3 className={styles.menu__title}>Cardápio</h3>
-        <SearchEngine search={search} setSearch={setSearch} />
-        <div className={styles.menu__filters}>
-          <Filters filter={filter} setFilter={setFilter} />
-          <Computer computer={computer} setComputer={setComputer} />
-        </div>
       </section>
     </main>
   );

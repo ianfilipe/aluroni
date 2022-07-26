@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { useState } from "react";
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import styles from "./Computer.module.scss";
 import options from "./options.json";
 
@@ -22,12 +22,8 @@ export default function Computer({ computer, setComputer }: ComputerProps) {
       onClick={() => setOpen(!open)}
       onBlur={() => setOpen(false)}
     >
-      <span>{computerName || "Ordernar por:"}</span>
-      {open ? (
-        <MdKeyboardArrowUp size={20} />
-      ) : (
-        <MdKeyboardArrowDown size={20} />
-      )}
+      <span>{computerName || "Ordernar por"}</span>
+      {open ? <RiArrowUpSLine size={24} /> : <RiArrowDownSLine size={24} />}
       <div
         className={classNames({
           [styles.computer__options]: true,

@@ -2,22 +2,19 @@
 
 .filters {
   display: flex;
-  gap: 24px;
+  gap: 8px;
   flex-wrap: wrap;
-  margin: 20px 0;
   &__filter {
+    color: #292b2f;
     align-items: center;
-    background-color: $grey;
+    background-color: #e8e8e9;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     display: flex;
-    font-size: 1.25rem;
-    font-weight: bold;
-    height: 40px;
+    padding: 16px;
     justify-content: center;
-    width: 150px;
     &--active {
-      background-color: $blue;
+      background-color: #f72c29;
       color: white;
     }
     &:hover {

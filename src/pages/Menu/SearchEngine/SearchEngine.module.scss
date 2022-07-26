@@ -3,26 +3,20 @@
 
 .searchEngine {
   align-items: center;
-  background-color: $grey;
-  border-radius: 5px;
   display: flex;
-  gap: 18px;
-  height: 42px;
+  gap: 16px;
+  height: 48px;
   justify-content: space-between;
-  padding: 0 15px;
-  width: 400px;
-  @media (max-width: $mobile) {
-    width: 100%;
-  }
+  padding: 16px;
+  flex: 1;
   input {
-    background-color: $grey;
+    color: #292b2f;
+    background-color: transparent;
     border: none;
-    font-size: 1.5rem;
-    font-weight: bold;
     outline: none;
     width: 100%;
     &::placeholder {
-      color: #4c4d5e;
+      color: #d9d9d9;
     }
   }
 }
