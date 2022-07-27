@@ -12,7 +12,7 @@ export default function Home() {
 	const navigate = useNavigate()
 	
 	function redirectToDetails(dish: typeof menu[0]) {
-		navigate(`/prato/${dish.id}`, { state: {...dish}})
+		navigate(`/prato/${dish.id}`, { state: {dish}})
 	}
 
 	return (
