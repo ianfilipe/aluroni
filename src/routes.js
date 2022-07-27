@@ -17,10 +17,10 @@ export default function AppRouter() {
 					<Route path='/' element={<DefaultPage />}>
 						<Route index element={<Home />} />
 						<Route path='sobre' element={<About />} />
+						<Route path='prato/:id' element={<Dish/>}/>
 					</Route>
 					<Route path='*' element={<NotFound/>} />
 					<Route path='cardapio' element={<Menu />} />
-					<Route path='prato/:id' element={<Dish/>}/>
 				</Routes>
 				<Footer/>
 			</Router>

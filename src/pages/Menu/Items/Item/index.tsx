@@ -1,31 +1,9 @@
-import classNames from 'classnames'
+import DishTags from 'components/DishTags'
 import { Dish } from 'types/dish'
 import styles from './Item.module.scss'
 
-// interface ItemProps {
-//   title: string;
-//   description: string;
-//   photo: string;
-//   size: number;
-//   serving: number;
-//   price: number;
-//   category: string;
-// }
-
-export default function Item(
-	props: Dish
-	//   {
-	//   title,
-	//   description,
-	//   photo,
-	//   size,
-	//   serving,
-	//   price,
-	//   category,
-	// }
-	//     : ItemProps
-) {
-	const { title, description, photo, size, serving, price, category } = props
+export default function Item(props: Dish) {
+	const { title, description, photo } = props
 	return (
 		<div className={styles.item}>
 			<div className={styles.item__image}>
@@ -36,24 +14,7 @@ export default function Item(
 					<h2>{title}</h2>
 					<p>{description}</p>
 				</div>
-				<div className={styles.item__tags}>
-					<div
-						className={classNames({
-							[styles.item__type]: true,
-							[styles['item__type__pastas']]: category.label === 'Massas',
-							[styles['item__type__meats']]: category.label === 'Carnes',
-							[styles['item__type__combos']]: category.label === 'Combos',
-							[styles['item__type__vegans']]: category.label === 'Veganos',
-						})}
-					>
-						{category.label}
-					</div>
-					<div className={styles.item__portion}>{size}g</div>
-					<div className={styles.item__amountPeople}>
-            Serve {serving} pessoa{serving === 1 ? '' : 's'}
-					</div>
-					<div className={styles.item__price}>R$ {price.toFixed(2)}</div>
-				</div>
+				<DishTags {...props} />
 			</div>
 		</div>
 	)
