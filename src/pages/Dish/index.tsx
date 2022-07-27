@@ -1,5 +1,6 @@
 import DishTags from 'components/DishTags'
 import menu from 'data/menu.json'
+import NotFound from 'pages/NotFound'
 import { RiArrowLeftLine } from 'react-icons/ri'
 import { useNavigate, useParams } from 'react-router-dom'
 import styles from './Dish.module.scss'
@@ -8,7 +9,7 @@ export default function Dish() {
 	const navigate = useNavigate()
 	const { id } = useParams()
 	const dish = menu.find(item => item.id === Number(id))
-	if (!dish) return ''
+	if (!dish) return <NotFound/>
 	return (
 		<>
 			<button className={styles.voltar} onClick={() => navigate(-1)}>

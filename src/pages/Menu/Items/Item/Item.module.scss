@@ -7,6 +7,13 @@ $combos: #e6c864;
 $vegans: #80aa40;
 
 .item {
+  &:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 8px #292b2f15;
+  }
+  padding: 16px;
+  border-radius: 8px;
+  transition: 0.2s;
   display: flex;
   flex-wrap: wrap;
   &__image {
