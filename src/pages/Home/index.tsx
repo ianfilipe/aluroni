@@ -2,6 +2,7 @@ import nossaCasa from 'assets/nossa_casa.png'
 import menu from 'data/menu.json'
 import { useNavigate } from 'react-router-dom'
 import stylesTheme from 'styles/Theme.module.scss'
+import { Dish } from 'types/dish'
 import styles from './Home.module.scss'
 
 
@@ -11,7 +12,7 @@ export default function Home() {
 
 	const navigate = useNavigate()
 	
-	function redirectToDetails(dish: typeof menu[0]) {
+	function redirectToDetails(dish: Dish) {
 		navigate(`/prato/${dish.id}`, { state: {dish}})
 	}
 

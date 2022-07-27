@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import menu from 'data/menu.json'
+import { Dish } from 'types/dish'
 import styles from './Item.module.scss'
 
 // interface ItemProps {
@@ -12,10 +12,8 @@ import styles from './Item.module.scss'
 //   category: string;
 // }
 
-type ItemProps = typeof menu[0];
-
 export default function Item(
-	props: ItemProps
+	props: Dish
 	//   {
 	//   title,
 	//   description,

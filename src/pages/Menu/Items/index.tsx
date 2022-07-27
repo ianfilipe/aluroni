@@ -1,5 +1,6 @@
 import menu from 'data/menu.json'
 import { useEffect, useState } from 'react'
+import { Menu } from 'types/dish'
 import Item from './Item'
 import styles from './Items.module.scss'
 
@@ -33,7 +34,7 @@ export default function Items(props: ItemsProps) {
 		return true
 	}
 
-	function computerList(newList: typeof menu) {
+	function computerList(newList: Menu) {
 		switch (computer) {
 		case 'portion':
 			return newList.sort((a, b) => (a.size > b.size ? 1 : -1))
