@@ -9,17 +9,19 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 export default function AppRouter() {
 	return (
-		<Router>
-			<Nav />
-			<Routes>
-				<Route path='/' element={<DefaultPage />}>
-					<Route index element={<Home />} />
-					<Route path='sobre' element={<About />} />
-				</Route>
-				<Route path='*' element={<NotFound/>} />
-				<Route path='cardapio' element={<Menu />} />
-			</Routes>
-			<Footer/>
-		</Router>
+		<main className="container">
+			<Router>
+				<Nav />
+				<Routes>
+					<Route path='/' element={<DefaultPage />}>
+						<Route index element={<Home />} />
+						<Route path='sobre' element={<About />} />
+					</Route>
+					<Route path='*' element={<NotFound/>} />
+					<Route path='cardapio' element={<Menu />} />
+				</Routes>
+				<Footer/>
+			</Router>
+		</main>
 	)
 }
