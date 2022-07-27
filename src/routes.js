@@ -2,6 +2,7 @@ import DefaultPage from 'components/DefaultPage'
 import Footer from 'components/Footer'
 import Nav from 'components/Nav'
 import About from 'pages/About'
+import Dish from 'pages/Dish'
 import Home from 'pages/Home'
 import Menu from 'pages/Menu'
 import NotFound from 'pages/NotFound'
@@ -19,6 +20,7 @@ export default function AppRouter() {
 					</Route>
 					<Route path='*' element={<NotFound/>} />
 					<Route path='cardapio' element={<Menu />} />
+					<Route path='prato/:id' element={<Dish/>}/>
 				</Routes>
 				<Footer/>
 			</Router>
