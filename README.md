@@ -2,20 +2,18 @@
 
 # Aluroni
 
-O Aluroni é o projeto do curso "React: lidando com arquivos estáticos" da Alura.
+O Aluroni é o projeto do curso "React: conhecendo a biblioteca React Router" da Alura.
 
 Neste curso você aprende:
 
-* A criar um projeto do zero com Create React App;
-* A utilizar o normalize.css para resetar estilos padrões de navegadores;
-* A configurar absolute imports para não precisar mais importar arquivos com vários níveis ('../../../');
-* Boas práticas em CSS como criar variáveis, criar arquivos para estas variáveis e para breakpoints de media-queries;
-* A utilizar o pacote classnames para poder utilizar o CSS Modules sem precisar concatenar um monte de estilos CSS e lidar com estilos condicionais;
-* Como utilizar o SVGR, um pacote que vem no Create React App para importar svgs como componentes React;
-* Como o React entende os imports estáticos tanto via arquivos .js quanto em arquivos de estilos como .scss ou .css.
-* Como importar arquivos estáticos como variáveis via js ou utilizando a pasta public para imports dinâmicos de arquivos estáticos;
+* Como refatorar um projeto utilizando ESLint;
+* Como desenvolver um código escalável, priorizando um código limpo e fácil de entender;
+* A utilizar o pacote react-router-dom de forma simples e prática, aprendendo todos os conceitos principais da biblioteca;
+* Como a biblioteca se integra com o navegador e utiliza de coisas nativas para mudar as rotas e compartilhar estados;
+* Como criar telas navegando entre elas de diversas formas diferentes e reaproveite componentes eles elas;
+* Sobre nested routes e como criá-las para reaproveitar código e resolver problemas;
 
-Link do curso: [React: lidando com arquivos estáticos](https://www.alura.com.br/curso-online-react-arquivos-estaticos)
+Link do curso: [React: conhecendo a biblioteca React Router](https://www.alura.com.br/curso-online-react-biblioteca-react-router)
 
 ## Guia
 
