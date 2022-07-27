@@ -4,10 +4,6 @@ import styles from './Nav.module.scss'
 export default function Nav() {
 	const routes = [
 		{
-			label: 'Início',
-			to: '/'
-		},
-		{
 			label: 'Cardápio',
 			to: '/cardapio'
 		},
@@ -18,7 +14,9 @@ export default function Nav() {
 	]
 	return (
 		<nav className={styles.nav}>
-			<h1 className={styles.nav__logo}>Aluroni</h1>
+			<Link to="/" className={styles.nav__logo}>
+				<h1>Aluroni</h1>
+			</Link>
 			<ul className={styles.nav__list}>
 				{routes.map((route, index) => (
 					<li key={index} className={styles.nav__link}>

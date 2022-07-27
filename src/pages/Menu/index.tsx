@@ -1,5 +1,6 @@
 // import { ReactComponent as Logo } from "assets/logo.svg";
 import { useState } from 'react'
+import stylesTheme from 'styles/Theme.module.scss'
 import Computer from './Computer'
 import Filters from './Filters'
 import Items from './Items'
@@ -23,7 +24,7 @@ export default function Menu() {
 				{/* <div className={styles.header__text}>A casa do código e da massa</div> */}
 			</header>
 			<section className={styles.menu}>
-				<h3 className={styles.menu__title}>Cardápio</h3>
+				<h3 className={stylesTheme.title}>Cardápio</h3>
 				<Items search={search} filter={filter} computer={computer} />
 			</section>
 		</main>

@@ -1,5 +1,7 @@
 import { Link, Outlet } from 'react-router-dom'
+import stylesTheme from 'styles/Theme.module.scss'
 import styles from './DefaultPage.module.scss'
+
 
 export default function DefaultPage() {
 	return (
@@ -12,7 +14,7 @@ export default function DefaultPage() {
 					<button className={styles.header__button}>Veja o Cardápio</button>
 				</Link>
 			</header>
-			<div>
+			<div className={stylesTheme.container}>
 				<Outlet/>
 			</div>
 		</>
